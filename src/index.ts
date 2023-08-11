@@ -37,7 +37,6 @@ const swaggerOptions = {
         },
       },
     },
-    security: [{ BearerAuth: [] }],
   },
   apis: ['./src/routes/*.ts'],
 };
