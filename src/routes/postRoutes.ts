@@ -48,7 +48,7 @@ const postRoutes = express.Router();
  *       500:
  *         description: Internal server error
  */
-postRoutes.post('/posts', createPost);
+postRoutes.post('/', createPost);
 
 /**
  * @swagger
@@ -81,7 +81,7 @@ postRoutes.post('/posts', createPost);
  *       500:
  *         description: Internal server error
  */
-postRoutes.get('/posts', getPosts);
+postRoutes.get('/', getPosts);
 
 /**
  * @swagger
@@ -114,7 +114,7 @@ postRoutes.get('/posts', getPosts);
  *       500:
  *         description: Internal server error
  */
-postRoutes.get('/posts/:postId', getPostById);
+postRoutes.get('/:postId', getPostById);
 
 /**
  * @swagger
@@ -158,7 +158,7 @@ postRoutes.get('/posts/:postId', getPostById);
  *       500:
  *         description: Internal server error
  */
-postRoutes.put('/posts/:postId', updatePost);
+postRoutes.put('/:postId', updatePost);
 
 /**
  * @swagger
@@ -187,7 +187,7 @@ postRoutes.put('/posts/:postId', updatePost);
  *       500:
  *         description: Internal server error
  */
-postRoutes.delete('/posts/:postId', deletePost);
+postRoutes.delete('/:postId', deletePost);
 
 export default postRoutes;
 
@@ -204,6 +204,8 @@ export default postRoutes;
  *           type: string
  *         content:
  *           type: string
+ *         userId:
+ *           type: integer
  *         createdAt:
  *           type: string
  *           format: date-time
